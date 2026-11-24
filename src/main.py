@@ -1,5 +1,11 @@
-from create import create
-from read import read
+from create import insertOne, insertMany
+from read import read, find, findOne
 
-# create("table1")
-# print(read("table1"))
+# Exemple de find
+# print(find("table1", {"age":24}))
+
+# Exemple de find avec filtre simple
+# print(find("table1", { "age": { "$gte": 18 }}))
+
+# Exemple de find avec filtre imbriqué
+# print(find("table1", { "$or": [{ "age": 18 }, { "nom": "Henry" }] }))
